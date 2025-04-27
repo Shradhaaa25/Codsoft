@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tribute to Stan Lee- Creator of many iconic Marvel superheroes. </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #d0e1ff, #ffffff);
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      overflow: hidden;
+      animation: fadeIn 1.5s ease-in;
+    }
+    .hero-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      filter: grayscale(10%);
+      transition: filter 0.5s ease;
+    }
+    .hero-image:hover {
+      filter: grayscale(0%) brightness(1.1);
+    }
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #1a237e;
+      margin: 20px;
+    }
+    h2 {
+      text-align: center;
+      font-style: italic;
+      color: #3f51b5;
+      margin-bottom: 30px;
+    }
+    .section {
+      padding: 20px 40px;
+      transition: background 0.3s ease;
+    }
+    .section:hover {
+      background: #f0f4ff;
+    }
+    .section h3 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: #1a237e;
+      position: relative;
+    }
+    .section h3::before {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: #1a237e;
+      border-radius: 2px;
+    }
+    .section p, .section ul {
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .section ul {
+      padding-left: 20px;
+    }
+    .section ul li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #0d47a1;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #003c8f;
+    }
+.gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 20px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+.card-content h3 {
+      margin-bottom: 10px;
+      color: #e53935;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      line-height: 1.5;}
+ .quote-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .quote-card {
+      background: #fff;
+      width: 260px;
+      height: 200px;
+      perspective: 1000px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .quote-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      border-radius: 15px;
+    }
+
+    .quote-card:hover .quote-inner {
+      transform: rotateY(180deg);
+    }
+
+    .quote-front, .quote-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      padding: 20px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    .quote-front {
+      background: #e3f2fd;
+      font-weight: bold;
+      color: #0d47a1;
+      font-size: 1.1rem;
+    }
+
+    .quote-back {
+      background: #8ea7e2;
+      transform: rotateY(180deg);
+      color: #1d1790;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 850px) {
+      .quote-card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .quote-card {
+        width: 100%;
+      }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src=" https://media.wired.com/photos/5be9d68a5d7c6a7b81d79e25/master/w_2560%2Cc_limit/StanLee-610719480.jpg" alt="Stan Lee" class="hero-image">
+    <h1>Stan Lee</h1>
+    <h2>"With great power there must also come — great responsibility."</h2>
+<h2>             BORN:  December 28, 1922 (New York City)</h2>
+<h2>    DIED: November 12, 2018 </h2>
+    <div class="section">
+
+      <h3>The Man Behind the Marvel</h3>
+
+      <p>Stan Lee, the mastermind behind the Marvel Universe, was born Stanley Martin Lieber on December 28, 1922, in New York City. As a die-hard Marvel fan, it’s impossible to overstate just how much he changed the world of comics. Lee didn’t just create superheroes—he revolutionized them. Starting his career at Timely Comics (soon to be Marvel), Stan co-created iconic characters like Spider-Man, Iron Man, the X-Men, the Hulk, Thor, and the Fantastic Four. His work in the 1960s kicked off the legendary "Marvel Age of Comics."</p>
+
+<p>What made Lee’s writing so special was how he made superheroes feel real. Spider-Man wasn’t just a web-slinging hero; he was a teenager dealing with school, love, and responsibility—something fans could truly relate to. The X-Men weren’t just mutants fighting bad guys; they were outcasts, reflecting real-world struggles for equality and acceptance. That’s what made Marvel's heroes so much more than just flashy costumes—they were human, with flaws, doubts, and dreams.</p>
+
+<p>Stan didn’t just stop at comics; he pushed Marvel to become a massive global phenomenon, with films, TV shows, and merchandise taking over the pop culture landscape. His trademark "Excelsior!" and his constant cameos in Marvel movies will forever be part of his legacy. Stan Lee passed away on November 12, 2018, but his impact on comics and pop culture lives on in every Marvel fan’s heart.
+</p>
+    </div>
+<div class="section">
+<h3>Stan lee's life and carrer</h3>
+<br>
+<h3>1922: Birth and Early Life</h3>
+<p>December 28, 1922: Stan Lee (born Stanley Martin Lieber) is born in New York City to Jewish immigrant parents. He grows up in a modest neighborhood, with an early interest in writing and literature.</p>
+<br>
+<h3>1939: Starting His Career</h3>
+<p>1939: At the age of 17, Stan Lee begins his career at Timely Comics (which later becomes Marvel Comics), initially hired as an assistant. His first job involves proofreading, writing captions, and other minor tasks.</p>
+<br>
+<h3>1941: First Big Break</h3>
+<p> 1941: Lee gets his first writing job with the comic Captain America #3. He starts working on other titles, but it is not until later that he becomes a household name in the comic world.</p>
+<br>
+<h3>1942–1945: World War II Service</h3>
+<p>1942–1945: During World War II, Lee serves in the U.S. Army. He works as a writer and illustrator, creating training materials and even propaganda for the military. This period marks a major step in his development as a creator and storyteller.</p>
+<br>
+<h3> 1947: Rejoining Timely Comics</h3>
+<p>1947: After the war, Stan Lee returns to Timely Comics and continues working on various comic book scripts, including superhero and non-superhero titles.</p>
+<br>
+<h3>1961: The Birth of the Marvel Universe</h3>
+<p>1961: Stan Lee, alongside artist Jack Kirby, co-creates The Fantastic Four, marking the birth of the "Marvel Age of Comics." This year also sees the creation of some of the first interconnected superhero stories that would define Marvel's style.</p>
+<br>
+<h3>1962: The Creation of Spider-Man</h3>
+<p>1962: In Amazing Fantasy #15, Stan Lee and artist Steve Ditko introduce Spider-Man. This character becomes one of the most iconic and beloved superheroes, with Lee’s decision to make Spider-Man a teenager dealing with real-life struggles resonating with readers.</p>
+<br>
+<h3>1963: Co-Creation of X-Men, Thor, Iron Man, and Hulk</h3>
+<p>1963: Lee continues to revolutionize the comic book world. In addition to Spider-Man, he co-creates several other iconic characters:
+<br>
+The X-Men (with artist Jack Kirby) address issues of social justice and discrimination.
+<br>
+Thor (with artist Jack Kirby) brings Norse mythology into the Marvel Universe.
+<br>
+Iron Man (with artist Don Heck) introduces a wealthy industrialist who builds a suit of armor to fight injustice.
+<br>
+The Hulk (with artist Jack Kirby) creates a tragic hero struggling with inner conflict.</p>
+<br>
+<h3>1964: The Birth of the Marvel Universe’s Shared Storytelling</h3>
+<p>1964: Lee and his collaborators, including artists like Kirby and Steve Ditko, continue expanding the Marvel Universe. This interconnected world of superheroes is a radical departure from the isolated characters in previous comics. The characters interact with each other, cross over into different comic book series, and join forces, making Marvel’s storytelling far more immersive and unique.</p>
+<br>
+<h3>1966: Marvel’s Success</h3>
+<p>1966: Marvel begins to see major success, with the publication of new titles and growing readership. Lee becomes a public figure, contributing more to Marvel’s identity, including becoming the editor-in-chief of Marvel Comics.</p>
+<br>
+<h3>1970s: Expanding the Marvel Universe</h3>
+<p>1970s: Lee’s storytelling expands beyond traditional superhero themes, incorporating complex social issues like civil rights, drug abuse, and political unrest. He also helps create Black Panther, the first African-American superhero, and the Black Widow.</p>
+<br>
+<h3>1972: Stan Lee Becomes Publisher</h3>
+<p>1972: Stan Lee is promoted to Publisher at Marvel, and with his leadership, Marvel Comics becomes the dominant force in the comic book industry, eclipsing many of its competitors.</p>
+<br>
+<h3>1974: The Marvel Method</h3>
+<p>1974: Lee’s creation of the Marvel Method revolutionizes comic book storytelling. In this process, Lee would outline the basic plot of a comic, and the artist would then draw the pages. Afterward, Lee would add the dialogue, creating a more collaborative and dynamic approach to comic book creation.</p>
+<br>
+<h3>1978: Stan Lee Leaves Full-Time Role at Marvel</h3>
+<p>1978: After over two decades of leading Marvel Comics, Lee steps down from his full-time position as publisher. However, he remains involved as chairman emeritus and continues to make significant contributions to Marvel.</p>
+<br>
+<h3>1980s–1990s: Expanding into Media</h3>
+<p>1980s–1990s: During this time, Lee’s role expands beyond comics. He becomes a key figure in Marvel’s TV shows and films, notably the Spider-Man and X-Men animated series, as well as creating several characters for these adaptations. He continues to work with Marvel in different capacities, often making cameo appearances and contributing to the creative process of new Marvel properties.</p>
+<br>
+<h3>1992: Stan Lee Media</h3>
+<p>1992: Stan Lee co-founds Stan Lee Media, a digital entertainment company, with the aim of creating new characters and content for the burgeoning internet age. However, the company faces financial difficulties and eventually goes bankrupt.</p>
+<br>
+<h3>2000s: Stan Lee’s Cameos in Films</h3>
+<p>2000s: With the rise of the Marvel Cinematic Universe (MCU), Stan Lee becomes a beloved figure in Hollywood. Starting with X-Men (2000), Lee makes cameo appearances in nearly every Marvel film. His cameos become a trademark, celebrated by fans across the world.</p>
+<br>
+<h3>2002: The First Spider-Man Film</h3>
+<p>2002: Stan Lee appears in Sam Raimi's Spider-Man film, marking one of the first big-screen adaptations of his beloved characters. The success of the Spider-Man film paves the way for the growth of the MCU.</p>
+<br>
+<h3>2010s: The Marvel Cinematic Universe</h3>
+<p>2010s: The MCU becomes a cultural phenomenon, with Stan Lee’s co-created characters taking center stage in global blockbusters. Lee’s role as a cultural ambassador for Marvel intensifies, as he attends conventions, events, and continues his iconic cameos. His influence on the MCU is undeniable, with Marvel becoming a dominant force in the film industry.</p>
+<br>
+<h3>2018: Stan Lee’s Passing</h3>
+<p>November 12, 2018: Stan Lee passes away at the age of 95. His death marks the end of an era, but his impact on comics and pop culture lives on through the countless characters and stories he created. His legacy is celebrated worldwide by fans, artists, writers, and filmmakers who continue to honor his work.</p>
+<br>
+<h3>Stan Lee’s Legacy:</h3>
+<p>Stan Lee’s career is a shining example of how one individual can shape an entire cultural landscape. He didn’t just create superheroes—he created a universe where readers could see themselves in the characters, whether they were struggling with personal issues or fighting for justice. Through his innovation in storytelling, his dedication to his craft, and his ability to make superheroes feel relatable, Stan Lee’s legacy continues to influence comics, film, and pop culture today. His characters remain timeless, representing the enduring power of human emotion and the fight for what’s right.</p>
+</ul>
+</div>
+
+    <div class="section">
+      <h3>Numerous contributions to the world of comics and popular culture. </h3>
+      <ul>
+        <li> Creation of Iconic Superheroes</li>
+<p>Stan Lee co-created some of the most recognizable superheroes in the world, including Spider-Man, Iron Man, Thor, Hulk, Black Panther, The X-Men, Fantastic Four, Doctor Strange, Daredevil, and many more.</p>
+<p>These characters were groundbreaking because they were more human and relatable, struggling with personal issues like love, loss, identity, and responsibility.</p>
+<br>
+        <li> The Marvel Universe.</li>
+<p>Lee, along with artists like Jack Kirby and Steve Ditko, built an interconnected universe where characters and stories were linked across various comic series. This concept of a shared universe was revolutionary at the time and set the foundation for modern comic book storytelling.</p>
+<br>
+<p>Marvel's heroes weren’t isolated; they interacted, teamed up, and crossed over, making the Marvel Universe feel cohesive and alive.</p>
+<br>
+        <li>Real-Life Struggles in Superhero Stories </li>
+<p> Unlike the "perfect" heroes that came before, Lee's characters had flaws, problems, and vulnerabilities. Spider-Man’s Peter Parker dealt with the struggles of being a teenager—balancing school, relationships, and the responsibilities of being a superhero.</p>
+<p>The X-Men were portrayed as outsiders, facing prejudice, reflecting real-world issues of civil rights and social justice.
+These relatable characters and their struggles created a more emotional and immersive experience for readers, allowing them to connect with superheroes on a personal level.</p>
+<br>
+        <li>Humanizing Superheroes</li>
+<p>Lee's storytelling made superheroes more accessible by portraying their personal lives, struggles, and emotions. His work reshaped how heroes were viewed, turning them into characters readers could identify with, not just admire.</p>
+<br>
+<li>Diversity and Social Issues</li>
+<p>Lee was instrumental in breaking barriers with diverse characters, such as Black Panther (one of the first black superheroes) and The Falcon.
+
+His stories often dealt with serious social issues, including racism, prejudice, and discrimination, which resonated with readers and sparked conversation about real-world topics.</p>
+<br>
+<li>The Rise of the Marvel Cinematic Universe (MCU)</li>
+<p>While not directly involved in the creation of the Marvel Cinematic Universe (MCU), Lee’s work laid the foundation for the films. Many of the MCU characters and storylines directly stem from the Marvel comics he co-created.
+His cameo appearances in nearly every Marvel movie became a beloved Easter egg for fans and a tradition in the MCU, making him a cultural symbol of Marvel’s cinematic success.</p>
+<br>
+<li>The Birth of the “Marvel Style” of Storytelling</li>
+<p>Lee pioneered a storytelling method known as the "Marvel Method," where he would outline the basic plot, and the artist would then draw the story, adding their own ideas and flair. Lee would later add the dialogue and narration. This collaborative process helped shape the unique tone of Marvel comics.</p>
+<br>
+<li> Cameos and Brand Icon</li>
+<p>Lee’s appearances in Marvel films became legendary. From the first X-Men film to Avengers: Endgame, his cameos have been a fan-favorite and a testament to his deep connection with the characters and stories he created.</p>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Why I Admire Him</h3>
+      <p>As a huge Marvel fan, I’ve always been captivated by how the Marvel Universe isn’t just about superheroes; it’s about real, human stories. The characters we love aren’t perfect—**Spider-Man** struggles with guilt and loss, **Iron Man** faces his own demons with addiction, and even **Thor** battles with feelings of inadequacy. What makes them so relatable is that they’re just like us—flawed, trying to do their best, even when the odds are stacked against them. </p>
+
+<p>Stan Lee’s creations go beyond just punching bad guys—they tackle complex themes like identity, responsibility, and the fight for justice. **The X-Men**, for example, deal with prejudice, discrimination, and the constant struggle to fit in, which resonates deeply in today’s world. Then there’s **Black Panther**, a king who carries the weight of an entire nation on his shoulders while grappling with personal loss and leadership.</p>
+
+<p>What really draws me in is how these stories are interconnected. The Marvel Universe isn’t a bunch of standalone tales; it’s a massive, intricate world where every character plays a part. Watching them come together in the **Marvel Cinematic Universe** feels like witnessing the ultimate team-up of dreams. Stan Lee didn’t just create superheroes; he created a universe where we could see ourselves in these characters. For me, Marvel is more than just comics or movies—it’s a journey, an escape, and a reminder that anyone can be a hero, flaws and all.</p>
+    </div>
+
+<h1>Marvel Superheroes Co-Created by Stan Lee</h1>
+
+  <div class="gallery">
+    <!-- Spider-Man -->
+    <div class="card">
+      <img src="https://sm.ign.com/ign_in/image/h/how-to-wat/how-to-watch-the-spider-man-movies-in-order_wxb1.jpg" alt="Spider-Man">
+      <div class="card-content">
+        <h3>Spider-Man</h3>
+        <p><strong>First Appearance:</strong> Amazing Fantasy #15 (1962)</p>
+        <p>Fun Fact: Stan Lee wanted a teenage hero who could deal with everyday problems—and Spider-Man became one of Marvel's most relatable characters ever.</p>
+      </div>
+    </div>
+<div class="card">
+      <img src="https://ironusa.vtexassets.com/arquivos/ids/196906-800-1067?v=637913412188030000&width=800&height=1067&aspect=true" alt="Iron Man">
+      <div class="card-content">
+        <h3>Iron Man</h3>
+        <p><strong>First Appearance:</strong> Tales of Suspense #39 (1963)</p>
+        <p>Fun Fact: Tony Stark was inspired by Howard Hughes, and the character evolved from a weapons manufacturer to a symbol of redemption and sacrifice.</p>
+      </div>
+    </div>
+
+    <!-- Hulk -->
+    <div class="card">
+      <img src="https://rukminim3.flixcart.com/image/850/1000/xif0q/poster/e/l/w/medium-poster-design-no-3081-hulk-poster-hulk-posters-for-room-original-imaggbyahnsrq4hn.jpeg?q=20&crop=false" alt="Hulk">
+      <div class="card-content">
+        <h3>Hulk</h3>
+        <p><strong>First Appearance:</strong> The Incredible Hulk #1 (1962)</p>
+        <p>Fun Fact: Inspired by Dr. Jekyll and Mr. Hyde, the Hulk represents inner rage and how difficult it can be to control one’s darker side.</p>
+      </div>
+    </div>
+
+<!-- Thor -->
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/outlier-battles/images/c/ca/Thor-AOU-Render.png/revision/latest?cb=20180605073900" alt="Thor">
+      <div class="card-content">
+        <h3>Thor</h3>
+        <p><strong>First Appearance:</strong> Journey into Mystery #83 (1962)</p>
+        <p>Fun Fact: Stan Lee wanted a god-like hero stronger than Hulk, so he turned to Norse mythology to create the mighty Thor!</p>
+      </div>
+    </div>
+
+    <!-- Black Panther -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Black_Panther_OS_Vol_1_2.png" alt="Black Panther">
+      <div class="card-content">
+        <h3>Black Panther</h3>
+        <p><strong>First Appearance:</strong> Fantastic Four #52 (1966)</p>
+        <p>Fun Fact: The first Black superhero in mainstream American comics, Black Panther broke barriers and inspired generations worldwide.</p>
+      </div>
+    </div>
+
+<div class="card">
+      <img src="https://booksandyou.in/cdn/shop/files/GothamComicsUncannyXmanDoublesizedeverymonth_1.jpg?v=1697478573" alt="X-Men">
+      <div class="card-content">
+        <h3>X-Men</h3>
+        <p><strong>First Appearance:</strong> X-Men #1 (1963)</p>
+        <p>Fun Fact: The X-Men were created as a metaphor for racism and prejudice, representing outcasts fighting for acceptance and justice.</p>
+      </div>
+    </div>
+<h2>Stan Lee & Superhero Quotes</h2>
+
+  <div class="quote-container">
+
+    <!-- Stan Lee Quotes -->
+    <div class="quote-card">
+      <div class="quote-inner">
+        <div class="quote-front">“Excelsior!”</div>
+        <div class="quote-back">Stan Lee’s signature sign-off — meaning “ever upward.”</div>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-inner">
+        <div class="quote-front">“With great power...”</div>
+        <div class="quote-back">“...comes great responsibility.” — Uncle Ben (Spider-Man)</div>
+      </div>
+    </div>
+
+    <!-- Superhero Quotes -->
+    <div class="quote-card">
+      <div class="quote-inner">
+        <div class="quote-front">“I am Iron Man.”</div>
+        <div class="quote-back">— Tony Stark, embracing who he is and what he stands for.</div>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-inner">
+        <div class="quote-front">“I’m always angry.”</div>
+        <div class="quote-back">— Bruce Banner, before Hulking out in *The Avengers* (2012).</div>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-inner">
+        <div class="quote-front">“Mutant and proud.”</div>
+        <div class="quote-back">— Mystique, standing tall in *X-Men: First Class*.</div>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-inner">
+        <div class="quote-front">“No man can win every battle.”</div>
+        <div class="quote-back">“But no man should fall without a struggle.” — Peter Parker</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+    <div class="section">
+      <h3>Learn More</h3>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Stan_Lee" target="_blank">Wikipedia</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=abdul+kalam+speech" target="_blank">Inspiring Speeches</a></li>
+<li><a href="https://therealstanlee.com/" target="_blank">Stan Lee's Official Site</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        this.style.color = '#ff6f61';
+        setTimeout(() => { this.style.color = ''; }, 500);
+      });
+    });
+  </script>
+</body>
+</html>
